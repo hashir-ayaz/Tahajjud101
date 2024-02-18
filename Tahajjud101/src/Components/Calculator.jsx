@@ -33,30 +33,41 @@ const Calculator = () => {
       <div className="calculator">
         <div>
           <h1>Calculate the last 3rd of the night</h1>
+          <p>
+            Enter the time of sunset and sunrise to calculate the last third of
+            the night. This is the best time to perform the Tahajjud Prayer
+          </p>
         </div>
-        <div>
-          <label htmlFor="sunset">Sunset</label>
-          <input
-            type="time"
-            id="sunset"
-            value={sunset}
-            onChange={(e) => setSunset(e.target.value)}
-            placeholder="Enter time of sunset"
-            name="sunset"
-          />
-          <label htmlFor="sunrise">Sunrise</label>
+        <div className="timepickers">
+          <div className="sunsettimepicker">
+            <label htmlFor="sunset">Sunset</label>
+            <input
+              type="time"
+              id="sunset"
+              value={sunset}
+              onChange={(e) => setSunset(e.target.value)}
+              placeholder="Enter time of sunset"
+              name="sunset"
+            />
+          </div>
+          <div className="sunrisetimepicker">
+            <label htmlFor="sunrise">Sunrise</label>
 
-          <input
-            type="time"
-            id="sunrise"
-            value={sunrise}
-            onChange={(e) => setSunrise(e.target.value)}
-            placeholder="Enter time of sunrise"
-            name="sunrise"
-          />
+            <input
+              type="time"
+              id="sunrise"
+              value={sunrise}
+              onChange={(e) => setSunrise(e.target.value)}
+              placeholder="Enter time of sunrise"
+              name="sunrise"
+            />
+          </div>
         </div>
 
-        <button onClick={calculateLastThird}>Calculate</button>
+        <div className="button-container">
+          <button onClick={calculateLastThird}>Calculate</button>
+        </div>
+
         {lastThirdStart && (
           <p>Last third of the night starts at: {lastThirdStart}</p>
         )}
