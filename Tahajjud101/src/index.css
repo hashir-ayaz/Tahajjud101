@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 * {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Roboto Mono" sans-serif;
 }
 .navbar {
+  font-family: "Roboto Mono" sans-serif;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Adjust as needed */
+  justify-content: space-between;
   background-color: white;
   border-bottom: 0.5px solid grey;
 }
@@ -42,101 +42,91 @@ a {
   text-decoration: none;
 }
 
-/* General styles for the calculator */
 .calculator {
-  font-family: "Roboto Mono", sans-serif; /* Use your preferred font-family */
-  color: #333; /* Dark text for better readability */
-  max-width: 600px; /* Adjust width as needed */
-  margin: 0 auto; /* Center the calculator */
-  padding: 2rem; /* Padding around the content */
-  background-color: #fff; /* White background */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-  border-radius: 20px; /* Rounded corners */
+  font-family: "Roboto Mono", sans-serif;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
   align-items: center;
   justify-content: center;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
-/* Styles for the header */
 .calculator h1 {
-  color: #000; /* Black color for the heading */
-  margin-bottom: 1rem; /* Space below the heading */
-  font-weight: 700; /* Bold font weight */
+  color: #000;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
-/* Description text styles */
 .calculator p {
-  margin-bottom: 2rem; /* Space below the paragraph */
-  line-height: 1.5; /* Line height for better readability */
+  margin-bottom: 2rem;
+  line-height: 1.5;
   font-weight: light;
 }
 
-/* Container for the inputs */
 .calculator .inputs-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 1rem; /* Space below the inputs */
+  margin-bottom: 1rem;
 }
 
-/* Individual input container styles */
 .calculator .input-container {
   display: flex;
   flex-direction: column;
 }
 
-/* Styles for labels */
 .calculator label {
   font-weight: bold;
-  margin-bottom: 0.5rem; /* Space below the label */
+  margin-bottom: 0.5rem;
 }
 
-/* Styles for inputs */
 .calculator input[type="time"] {
-  border: 2px solid #ccc; /* Light gray border */
-  padding: 0.5rem; /* Padding inside the inputs */
-  font-size: 1rem; /* Larger font size for readability */
+  /* border: 2px solid #ccc; */
+  padding: 0.5rem;
+  font-size: 1rem;
   border-radius: 10px;
 }
 
-/* Styles for the calculate button */
 .calculator button {
-  background-color: #df8601; /* Orange background */
-  color: #fff; /* White text */
+  background-color: #df8601;
+  color: #fff;
   border: none;
-  padding: 0.5rem 1rem; /* Padding inside the button */
-  font-size: 1rem; /* Font size to match inputs */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.05s; /* Transition for hover effect */
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.05s;
   border-radius: 5px;
 }
-/* Hover and focus styles for the button */
+
 .calculator button:hover,
 .calculator button:focus {
-  background-color: #cc7a00; /* Darker orange on hover/focus */
+  background-color: #cc7a00;
 }
 
 .calculator .button-container {
   margin-top: 20px;
   display: flex;
-  justify-content: flex-end; /* This aligns the button to the right */
+  justify-content: flex-end;
 }
 .banner {
   margin: 0 auto;
-  overflow: hidden; /* This will hide any part of the image that overflows the container's bounds */
-  /* width: 70%; */
+  overflow: hidden;
 }
 
 .banner img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  object-position: center; /* Align the bottom part of the image to the container's bottom */
+  object-position: center;
   border-radius: 10px;
-  margin-top: 150px;
+  margin-top: 75px;
 }
 
-/* General Benefits container styles */
 .benefits {
   display: flex;
   flex-direction: column;
@@ -144,10 +134,9 @@ a {
   padding: 20px;
 }
 
-/* Banner image styles */
 .banner img {
   width: 100%;
-  max-height: 300px; /* Adjust as needed */
+  max-height: 300px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -158,20 +147,17 @@ a {
   margin-top: 50px;
 }
 
-/* Benefits list styles */
 .benefitslist {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 5px;
-  /* background-color: blue; */
   width: 80%;
   margin: auto;
   padding: 0;
 }
 
-/* BenefitItem styles */
 .benefit-item {
   max-width: 15%;
   background: #f7f7f7;
@@ -191,7 +177,7 @@ a {
 }
 
 .benefit-item strong {
-  display: block; /* Makes the name block level for its own line */
+  display: block;
   font-size: 1.25rem;
   margin-bottom: 10px;
 }
@@ -202,4 +188,47 @@ a {
   border-radius: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .navbar li,
+  .navbar h1 {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .calculator {
+    padding: 1rem;
+    margin: 20px 10px;
+    max-width: 90%;
+  }
+
+  .benefitslist,
+  .calculator .inputs-container {
+    flex-direction: column;
+  }
+
+  .benefit-item {
+    max-width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .banner img {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar li,
+  .navbar h1 {
+    font-size: 14px;
+  }
+
+  .benefit-item {
+    max-width: 100%;
+  }
 }

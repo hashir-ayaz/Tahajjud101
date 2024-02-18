@@ -10,6 +10,7 @@ function App() {
       <Navbar></Navbar>
       <Calculator></Calculator>
       <Benefits></Benefits>
+      <h1>What is Tahajjud?</h1>
     </>
   );
 }
